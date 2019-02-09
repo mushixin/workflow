@@ -124,7 +124,11 @@ public class WFXMLImportUtil {
 		return 	nodes;
 	}
 	
-	
+	/**
+	 * 从xml结点中得到WF_Node
+	 * @param element
+	 * @return
+	 */
 	private static WF_Node getWF_Node(Element element) {
 		WF_Node node=new WF_Node();
 		for (Iterator<Element> subit = element.elementIterator(); subit.hasNext();) {
@@ -199,7 +203,6 @@ public class WFXMLImportUtil {
 		String str=readFromFile("C:\\Users\\Administrator\\Desktop\\myworkflow.xml");
 		WorkFlowDesp desp=change2Obj(str);
 		System.out.println(desp);
-		return;
 	}
 
 }
