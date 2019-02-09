@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkFlowDesp>
+
+  <WF_Flow>
+   <No>15</No>
+    <Name>请假流程</Name>
+    <StartLimitRole>0</StartLimitRole>
+  </WF_Flow>
+
+  <WF_Nodes>	
+  <WF_Node>
+    <No>1501</No>
+    <Name>发起请假</Name>
+    <FocusField>请假理由:@QingJiaLiYou</FocusField>
+  </WF_Node>
+  <WF_Node>
+    <No>1502</No>
+    <Name>组长处理请假</Name>
+    <FocusField />
+  </WF_Node>
+  <WF_Node>
+    <No>1503</No>
+    <Name>财务部记录</Name>
+    <FocusField />
+  </WF_Node>
+  </WF_Nodes>
+
+  <WF_Directions>
+  <WF_Direction>
+    <No>01515011502</No>
+    <FromNode>1501</FromNode>
+    <ToNode>1502</ToNode>
+  </WF_Direction>     
+ <WF_Direction>
+    <No>01515021503</No>
+    <FromNode>1502</FromNode>
+    <ToNode>1503</ToNode>
+  </WF_Direction>     
+  <WF_Direction>
+    <No>01515021501</No>
+    <FromNode>1502</FromNode>
+    <ToNode>1501</ToNode>
+  </WF_Direction>     
+  </WF_Directions>
+
+  <Table_Nodes>
+   <Table_Node>
+    <No>1501123</No>
+    <Name>申请人姓名</Name>
+    <Type>Text</Type>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>50</MaxLen>
+   </Table_Node>
+   <Table_Node>
+    <No>1501124</No>
+    <Name>请假起始日期</Name>
+    <Type>Date</Type>
+    <UIWidth>125</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>50</MaxLen>
+   </Table_Node>
+   <Table_Node>
+    <No>1501125</No>
+    <Name>请假天数</Name>
+    <Type>Number</Type>
+    <UIWidth>100</UIWidth>
+    <UIHeight>23</UIHeight>
+    <MinLen>0</MinLen>
+    <MaxLen>50</MaxLen>
+   </Table_Node>
+   <Table_Node>
+    <No>1501126</No>
+    <Name>请假理由</Name>
+    <Type>Text</Type> 
+    <UIWidth>100</UIWidth>
+    <UIHeight>100</UIHeight>
+    <MinLen>10</MinLen>
+    <MaxLen>4000</MaxLen>
+   </Table_Node>
+  </Table_Nodes>
+
+
+</WorkFlowDesp>
